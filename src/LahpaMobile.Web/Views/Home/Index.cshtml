@@ -1,0 +1,15 @@
+﻿@model LahpaMobile.Web.ViewModels.HomeViewModel
+
+@{
+    ViewBag.Title = "LAHPA Mobile";
+}
+
+<h2>Louisville Hockey</h2>
+
+<ul class="scheduleList">
+    @foreach (var schedule in Model.Schedules)
+    {
+        <li>@Html.ActionLink(schedule.Description,"Index", "Schedule", new{id = schedule.Description},null)</li>
+        
+    }
+</ul>

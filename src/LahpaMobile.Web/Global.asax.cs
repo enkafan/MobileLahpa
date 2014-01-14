@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
+using LahpaMobile.Web.App_Start;
 
 namespace LahpaMobile.Web
 {
@@ -13,6 +14,7 @@ namespace LahpaMobile.Web
         {
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+            SimpleInjectorInitializer.Initialize();
         }
     }
 }

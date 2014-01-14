@@ -1,0 +1,18 @@
+﻿@model LahpaMobile.Web.Controllers.LeagueScheduleViewModel
+
+@{
+    ViewBag.Title = "LAHPA Mobile - " + Model.Description;    
+}
+
+<h2>@Model.Description</h2>
+
+@foreach (var day in Model.Days)
+{
+    <h3>@day.Description</h3>
+    <table>
+        @foreach (var game in day.Games)
+        {
+            <tr><td>@game.Time.ToShortTimeString()</td> <td>@game.HomeTeam</td><td>@game.AwayTeam</td><td>@game.Location</td></tr>
+        }
+    </table>
+}

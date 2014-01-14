@@ -1,0 +1,210 @@
+﻿
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="LAHPA" content="Louisville Adult Hockey Players Association, for adults aka seniors who want to play ice hockey" />
+    <link rel="icon" href="http://lahpa.com/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="http://lahpa.com/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="http://lahpa.com/apple-touch-icon.png" />
+
+    <title>Standings & Schedules</title>
+
+    <link rel="stylesheet" type="text/css" media="screen" href="../rw_common/themes/blueballsynergy/styles.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../rw_common/themes/blueballsynergy/colourtag-page8.css" />
+    <link rel="stylesheet" type="text/css" media="print" href="../rw_common/themes/blueballsynergy/print.css" />
+    <!--[if IE]><style type="text/css" media="screen">body {behavior: url(../rw_common/themes/blueballsynergy/csshover.htc);}</style><![endif]-->
+    <!--[if IE 8]><link rel="stylesheet" href="../rw_common/themes/blueballsynergy/css/ie8.css" type="text/css" media="all"/><![endif]-->
+    <!--[if IE 7]><link rel="stylesheet" href="../rw_common/themes/blueballsynergy/css/ie7.css" type="text/css" media="all"/><![endif]-->
+    <!--[if lt IE 7]>
+    <script type="text/javascript">
+        if (navigator.platform == "Win32" && navigator.appName == "Microsoft Internet Explorer" && window.attachEvent) {
+            window.attachEvent("onload", enableAlphaImages);
+        }
+
+        function enableAlphaImages(){
+            var rslt = navigator.appVersion.match(/MSIE (\d+\.\d+)/, '');
+            var itsAllGood = (rslt != null && Number(rslt[1]) >= 5.5);
+            if (itsAllGood) {
+                for (var i=0; i<document.all.length; i++){
+                    var obj = document.all[i];
+                    var bg = obj.currentStyle.backgroundImage;
+                    var img = document.images[i];
+                    if (bg && bg.match(/\.png/i) != null) {
+                        var img = bg.substring(5,bg.length-2);
+                        var offset = obj.style["background-position"];
+                        obj.style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='"+img+"', sizingMethod='crop')";
+                        obj.style.backgroundImage = "url('../rw_common/themes/blueballsynergy/blank.gif')";
+                        obj.style["background-position"] = offset; // reapply
+                    } else if (img && img.src.match(/\.png$/i) != null) {
+                        var src = img.src;
+                        img.style.width = img.width + "px";
+                        img.style.height = img.height + "px";
+                        img.style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='"+src+"', sizingMethod='crop')";
+                        img.src = "../rw_common/themes/blueballsynergy/blank.gif";
+                    }
+
+                }
+            }
+        }
+    </script>
+
+    <style>
+    .clearfix{ display: inline-block; }
+    </style>
+    <![endif]-->
+
+    <link rel="stylesheet" type="text/css" media="screen" href="../rw_common/themes/blueballsynergy/css/sidebar/sidebar_right.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../rw_common/themes/blueballsynergy/css/extracontenttop/extracontenttop_show.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../rw_common/themes/blueballsynergy/css/extracontentbottom/extracontentbottom_hide.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../rw_common/themes/blueballsynergy/css/logo/logoshow.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../rw_common/themes/blueballsynergy/css/fontscontent/helveticacontent.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../rw_common/themes/blueballsynergy/css/fontsheadline/yanone_headline.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../rw_common/themes/blueballsynergy/css/fontsnavmenu/helvetica_navmenu.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../rw_common/themes/blueballsynergy/css/fontsize/fontnormal.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../rw_common/themes/blueballsynergy/css/gradientcolors/gradient_gray.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../rw_common/themes/blueballsynergy/css/customimage/customimghide.css" />
+
+
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript"></script>
+    <script src="../rw_common/themes/blueballsynergy/js/setup.js" type="text/javascript"></script>
+    <script src="../rw_common/themes/blueballsynergy/js/extracontent.min.js" type="text/javascript"></script>
+    <script src="../rw_common/themes/blueballsynergy/javascript.js" type="text/javascript"></script>
+
+
+
+
+
+</head>
+<!-- This page was styled using the Blueball Synergy theme from Blueball Design. http://www.blueballdesign.com -->
+
+<body>
+    <div id="pagecontainer">
+        <div id="innerpagewrapper">
+            <!-- Header -->
+            <div id="pageheader">
+                <div id="logo"><a href="http://lahpa.com/"><img src="../rw_common/images/LAHPAstickoutfitlogoBLUE.png" width="200" height="51" alt="Site logo" /></a></div>
+                <div id="customimage">
+                    <!-- Replace this line with your BannerZest code -->
+                </div>
+                <h1>Louisville Adult Hockey Players Association</h1>
+                <h2>The coolest game in Louisville!</h2>
+            </div>
+            <!-- End Header -->
+            <!-- Site Menus -->
+            <div id="navcontainer">
+                <div id="nav">
+                    <ul><li><a href="../index.html" rel="self">Home</a></li><li><a href="../page14/page14.html" rel="self">League Info</a><ul><li><a href="../page14/page10/page10.html" rel="self">B</a><ul><li><a href="../page14/page10/contact-3/index.php" rel="self">Registration - Winter 14</a></li><li><a href="../page14/page10/page28/page28.html" rel="self">Schedule</a></li><li><a href="../page14/page10/page29/page29.html" rel="self">Standings</a></li><li><a href="http://lahpa.com/page177/index.php" rel="self">Rosters</a></li><li><a href="../page14/page10/page86/page86.php" rel="self">Player Stats</a></li><li><a href="../page14/page10/page79/page79.php" rel="self">Expanded Standings</a></li><li><a href="../page14/page10/page33/page33.html" rel="self">Playoffs</a></li></ul></li><li><a href="../page14/styled-7/page170.html" rel="self">C</a><ul><li><a href="../page14/styled-7/page11/page11.html" rel="self">C High Life</a><ul><li><a href="../page14/styled-7/page11/page20/page20.html" rel="self">Schedule</a></li><li><a href="../page14/styled-7/page11/page22/page22.html" rel="self">Standings</a></li><li><a href="http://lahpa.com/page89/" rel="self">Rosters</a></li><li><a href="../page14/styled-7/page11/iframe-3/index.html" rel="self">High Life Player Stats</a></li><li><a href="../page14/styled-7/page11/iframe-5/index.html" rel="self">Exp Standings</a></li><li><a href="../page14/styled-7/page11/page40/page40.html" rel="self">Playoffs</a></li></ul></li><li><a href="../page14/styled-7/page12/page12.html" rel="self">C Ale</a><ul><li><a href="../page14/styled-7/page12/page26/page26.html" rel="self">Schedule Ale1</a></li><li><a href="../page14/styled-7/page12/page27/page27.html" rel="self">Standings Ale1</a></li><li><a href="../page14/styled-7/page12/iframe-8/page178.html" rel="self">Schedule Ale2</a></li><li><a href="../page14/styled-7/page12/iframe-9/page179.html" rel="self">Standings Ale2</a></li><li><a href="../page14/styled-7/page12/iframe-11/page181.html" rel="self">Schedule Cross Div Ale</a></li><li><a href="../page14/styled-7/page12/iframe-14/page184.html" rel="self">Standings Cross Div Ale</a></li><li><a href="../page14/styled-7/page12/iframe-4/index.html" rel="self">Ale Player Stats</a></li><li><a href="../page14/styled-7/page12/iframe-6/index.html" rel="self">Exp Standings</a></li><li><a href="http://lahpa.com/page89/" rel="self">Rosters</a></li><li><a href="../page14/styled-7/page12/page34/page34.html" rel="self">Playoffs</a></li></ul></li><li><a href="../page14/styled-7/styled-5/page77.html" rel="self">C Lager</a><ul><li><a href="../page14/styled-7/styled-5/page68/page68.html" rel="self">Schedule Lager</a></li><li><a href="../page14/styled-7/styled-5/page94/page94.html" rel="self">Standings Lager</a></li><li><a href="../page14/styled-7/styled-5/page84/page84.php" rel="self">Player Stats Lager</a></li><li><a href="../page14/styled-7/styled-5/page93/page93.php" rel="self">Expanded Standings Lager</a></li><li><a href="http://lahpa.com/page89/" rel="self">Rosters</a></li><li><a href="../page14/styled-7/styled-5/styled-6/page169.html" rel="self">Playoffs</a></li></ul></li></ul></li><li><a href="../page14/page72/page72.html" rel="self">D</a><ul><li><a href="../page14/page72/contact-6/index.php" rel="self">Registration - Winter 14</a></li><li><a href="../page14/page72/page62/page62.html" rel="self">Schedule</a></li><li><a href="../page14/page72/page65/page65.html" rel="self">Standings</a></li><li><a href="../page14/page72/page78/page78.php" rel="self">Player Stats</a></li><li><a href="../page14/page72/page80/page80.php" rel="self">Expanded Standings</a></li><li><a href="http://lahpa.com/page176/page176.php" rel="self">Rosters</a></li><li><a href="http://lahpa.com/page75/page75.php" rel="self">Next Season Registrants</a></li><li><a href="../page14/page72/page127/page127.html" rel="self">Playoffs</a></li></ul></li><li><a href="../page14/styled-3/page152.html" rel="self">Z</a><ul><li><a href="../page14/styled-3/contact-5/index.php" rel="self">Registration - Winter 14</a></li><li><a href="http://lahpa.com/page82/page82.php" rel="self">Rosters</a></li><li><a href="../page14/styled-3/iframe-7/index.html" rel="self">Schedule</a></li></ul></li><li><a href="../page14/page35/page35.html" rel="self">SNF</a><ul><li><a href="../page14/page35/contact-8/index.php" rel="self">F13SNFRegistration NEW</a></li><li><a href="../page14/page35/page69/page69.html" rel="self">Ironman</a></li><li><a href="../page14/page35/styled-9/page88.php" rel="self">2013-14 Schedule</a></li><li><a href="http://lahpa.com/page31/page31.php" rel="self">Rosters</a></li></ul></li><li><a href="../page14/page0/page0.html" rel="self">Never Ever</a><ul><li><a href="http://lahpa.com/page16/page16.php" rel="self">Rosters</a></li><li><a href="../page14/page0/page115/page115.html" rel="self">Photo Gallery</a></li></ul></li><li><a href="../page14/page13/page13.html" rel="self">Advanced Skills</a></li><li><a href="../page14/page15/page15.html" rel="self">Over 30</a><ul><li><a href="../page14/page15/contact-2/index.php" rel="self">Registration - Winter 14</a></li><li><a href="../page14/page15/page21/page21.html" rel="self">Schedule</a></li><li><a href="http://lahpa.com/page119/page119.php" rel="self">Rosters</a></li><li><a href="http://lahpa.com/page189/page189.php" rel="self">Next Season Registrants</a></li></ul></li></ul></li><li><a href="page4.html" rel="self" id="current">Standings & Schedules</a></li><li><a href="../page23/page23.html" rel="self">Rules</a></li><li><a href="../page9/page9.html" rel="self">About Us</a></li></ul>
+                </div>
+            </div>
+            <!-- End Site Menu -->
+            <div id="extraContentTop">
+                <div id="extraContainer1"><!--extra user content renders here--></div><!-- #extraContainer1 -->
+                <div class="clearer"></div>
+            </div>
+            <!-- Content Wrappers -->
+            <div id="contentwrapper">
+
+                <!-- Sidebar -->
+                <div id="sidebarContainer">
+                    <div class="sideHeader">Other Info</div>
+                    <div id="sidebarcontent">
+                        <br />iCal users subscribe<br /><a href="webcal://lahpa.com/scity/D_League/D_League_iCal.ics" rel="self">D League</a><br /><br /><a href="webcal://lahpa.com/scity/C_Lager/C_Lager_iCal.ics" rel="self">C League Lager</a><br /><br /><a href="webcal://lahpa.com/scity/C_Ale_2/C_Ale_2_iCal.ics" rel="self">C League Ale 2</a><br /><br /><a href="webcal://lahpa.com/scity/C_Ale_1/C_Ale_1_iCal.ics" rel="self">C League Ale 1</a><br /><br /><a href="webcal://lahpa.com/scity/C_High_Life/C_High_Life_iCal.ics" rel="self">C League High Life</a><br /><br /><a href="webcal://lahpa.com/scity/B_League/B_League_iCal.ics" rel="self">B League<br /></a><br /><a href="webcal://lahpa.com/scity/Over_30_League/Over_30_League_iCal.ics" rel="self">Over 30 League<br /></a><br /><br />Team Pages<br /><br /><a href="http://lahpa.com/page89/" rel="self" title="C League Teams &#38; Rosters">C League Teams</a><br /><br /><a href="../page14/styled-3/iframe-7/index.html" rel="self" title="C Plus League Teams &#38; Rosters">C Plus League Teams</a><br /><br /><a href="http://lahpa.com/page82/page82.php" rel="self" title="B League Teams &#38; Rosters">B League Teams</a><br /><br /><br />
+                        <br />
+
+                    </div>
+                </div>
+                <!-- End Sidebar -->
+                <!-- Content -->
+                <div id="contentContainer">
+                    <div id="content">
+                        <style>
+                            #columns-container {
+                                width: 99%;
+                                padding: 0px;
+                                margin: 0px;
+                                overflow: hidden;
+                            }
+
+                            #columns-left {
+                                float: left;
+                                width: 41.32%;
+                                margin-left: 0.00%;
+                                margin-right: 1.20%;
+                                padding: 0.000000px;
+                                overflow: hidden;
+                                border-right: 1px solid #000000;
+                            }
+
+                            #columns-right {
+                                float: right;
+                                width: 54.66%;
+                                margin-left: 1.57%;
+                                margin-right: 0.00%;
+                                padding: 0.000000px;
+                                overflow: hidden;
+                            }
+
+                            #columns-clearer {
+                                width: 99%;
+                                clear: both;
+                            }
+                        </style><div id="myExtraContent1">
+                            <div class="column three">
+                                <div class="content">
+                                    <h2>Pond Hockey</h2><p>
+                                        <b>Labatt&rsquo;s Blue Pond Hockey Tournament <br>February 14, 15 & 16, 2014, St. Ignace, MI</b><br><br><a href="http://lahpa.com/page131/page131.php" rel="self"><img class="imageStyle" alt="Screen Shot 2013-10-01 at 8.37.45 AM" src="files/screen-shot-2013-10-01-at-8.37.45-am.png" width="251" height="82" /></a><br>3 Game Minimum<br>
+                                        Cost:<br>
+                                        &middot; $55 (if you already have Pond Hockey Jerseys)<br>
+                                        &middot; $155 (includes two Pond Hockey Jerseys)
+                                        <br>
+                                        Registration Ends: October 31st.
+                                        <a href="../page131/page131.php" rel="self" title="Pond Hockey Registration">Click to register</a>!
+                                    </p>
+                                </div><!-- .content -->
+                            </div><!-- .column .three -->
+                            <div class="column three">
+                                <div class="content">
+                                    <h2>Equipment Exchange</h2><p><a href="../page90/index.php" rel="self" title="Equipment Exchange"><img class="imageStyle" alt="images-23" src="files/images-23.jpg" width="167" height="167" /></a><br>You asked for it and you got it.  An online listing where you can list your <a href="../page90/index.php" rel="self" title="Equipment Exchange">equipment</a> for sale to our hockey community.</p>
+                                </div><!-- .content -->
+                            </div><!-- .column .three -->
+                            <div class="column three">
+                                <div class="content">
+                                    <h2>Never Ever League</h2><p><a href="../page14/page0/page0.html" rel="self" title="Never Ever"><img class="imageStyle" alt="neverever 009" src="files/neverever-009.jpg" width="217" height="163" /></a><br>Winter 2014 Never Ever League <a href="../page14/page0/page0.html" rel="self" title="Never Ever">registration</a> is now open.</p>
+                                </div><!-- .content -->
+                            </div><!-- .column .three -->
+                        </div><!-- #myExtraContent -->
+                        <div id='columns-container'><div id='columns-left'><h1>Standings</h1><span style="font-size:7px; "><br /></span><a href="../page14/page72/page65/page65.html" rel="self" title="Standings">D League</a><br /> - <a href="../page14/page72/page78/page78.php" rel="self" title="Player Stats">Player Stats</a><a href="../page14/styled-7/page12/page27/page27.html" rel="self" title="C League Standings"><br /></a> - Expanded <a href="../page14/page72/page80/page80.php" rel="self" title="Expanded Standings">Team Stats</a><br /><span style="font-size:8px; "><br /></span><a href="../page14/styled-7/styled-5/page94/page94.html" rel="self" title="Standings Lager">C League Lager</a><br /> - <a href="../page14/styled-7/styled-5/page84/page84.php" rel="self" title="Player Stats Lager">Player Stats</a><a href="../page14/styled-7/page11/page22/page22.html" rel="self" title="C-Plus League Standings"><br /></a> - Expanded <a href="../page14/styled-7/styled-5/page93/page93.php" rel="self" title="Expanded Standings Lager">Team Stats</a><br /><span style="font-size:8px; "><br /></span><a href="../page14/styled-7/page12/iframe-9/page179.html" rel="self" title="Standings Ale2">C League Ale_2</a> <br /> - <a href="../contact-10/index.php" rel="self" title="Player Stats Ale">Player Stats</a><a href="../page14/styled-7/page12/page27/page27.html" rel="self" title="C League Standings"><br /></a> - Expanded <a href="../page89/index.php" rel="self" title="Expanded Standings">Team Stats</a><br /><br /><a href="../page14/styled-7/page12/page27/page27.html" rel="self" title="Standings Ale">C League Ale_1</a> <br /> - <a href="../contact-10/index.php" rel="self" title="Player Stats Ale">Player Stats</a><a href="../page14/styled-7/page12/page27/page27.html" rel="self" title="C League Standings"><br /></a> - Expanded <a href="../page89/index.php" rel="self" title="Expanded Standings">Team Stats</a><br /><span style="font-size:8px; "><br /></span><a href="../page14/styled-7/page11/page22/page22.html" rel="self" title="Standings">C League High Life </a> <br /> - <a href="../page14/styled-7/page12/iframe-6/index.html" rel="self" title="Player Stats">Player Stats</a><a href="../page14/styled-7/page12/page27/page27.html" rel="self" title="C League Standings"><br /></a> - Expanded <a href="../page90/index.php" rel="self" title="Expanded Standings">Team Stats</a><br /><br /><a href="../page14/page10/page29/page29.html" rel="self" title="Standings">B League</a><br /> - <a href="../page14/page10/page86/page86.php" rel="self" title="Player Stats">Player Stats</a><a href="../page14/styled-7/page11/page22/page22.html" rel="self" title="C-Plus League Standings"><br /></a> - Expanded <a href="../page14/page10/page79/page79.php" rel="self" title="Expanded Standings">Team Stats</a><br /><br /><br /><div class="image-left"><img class="imageStyle" alt="" src="files/page8_4.gif" width="186" height="51" /></div></div><div id='columns-right'><h1>Schedules</h1><span style="font-size:8px; "><br /></span><a href="../page14/styled-3/iframe-7/index.html" rel="self" title="Schedule">Z League<br /></a><br /><a href="../page14/page72/page62/page62.html" rel="self" title="Schedule">D League</a> <a href="../page14/page72/page127/page127.html" rel="self" title="Playoffs">Playoffs</a><br /><br /><a href="../page14/styled-7/styled-5/page68/page68.html" rel="self" title="Schedule Lager">C League Lager</a>  -  -  <a href="../page14/styled-7/styled-5/styled-6/page169.html" rel="self" title="Playoffs">Playoffs</a><br /><span style="font-size:7px; "><br /></span><a href="../page14/styled-7/page12/iframe-8/page178.html" rel="self" title="Schedule Ale2">C League Ale_2 </a> -  -  <a href="../page14/styled-7/page12/page34/page34.html" rel="self" title="Playoffs">Playoffs</a><br />(Porter Paints, Icemen, Sherwin Williams, Rink Rats)<span style="font-size:7px; "><br /></span><span style="font-size:7px; "><br /></span><a href="../page14/styled-7/page12/page26/page26.html" rel="self" title="Schedule Ale">C League Ale_1 </a> -  -  <a href="../page14/styled-7/page12/page34/page34.html" rel="self" title="Playoffs">Playoffs</a><br />(Bulldogs, Beermen, Pylons, Grizzlies)<br /><br /><a href="../page14/styled-7/page12/iframe-11/page181.html" rel="self" title="Schedule Cross Div Ale">C League Ale_</a>Cross Div.<br /><span style="font-size:7px; "><br /></span><span style="font-size:7px; "><br /></span><a href="../page14/styled-7/page11/page20/page20.html" rel="self" title="Schedule">C League High Life </a> -  -  <a href="../page14/styled-7/page11/page40/page40.html" rel="self" title="Playoffs">Playoffs</a><br /><br /><a href="../page14/page10/page28/page28.html" rel="self" title="Schedule">B League</a>   <a href="../page14/page10/page33/page33.html" rel="self" title="Playoffs">Playoffs</a><br /><span style="font-size:7px; "><br /></span><a href="../page14/page15/page21/page21.html" rel="self" title="Over 30 League Schedule">Over 30 League <br /></a><span style="font-size:7px; "><br /></span><a href="../page14/page0/page0.html" rel="self" title="Never Ever League">Never Ever League<br /></a><span style="font-size:8px; "><a href="../page14/page0/page0.html" rel="self" title="Never Ever League"><br /></a></span><a href="../page14/page35/page49/page49.html" rel="self" title="Schedule">Saturday Night Fever League</a><a href="../page14/page0/page0.html" rel="self" title="Never Ever League"><br /></a><br /><div class="image-left"><iframe src="http://www.facebook.com/plugins/like.php?href=185550966885&amp;layout=standard&amp;show_faces=true&amp;width=450&amp;action=like&amp;colorscheme=light&amp;height=80" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:450px; height:80px;" allowtransparency="true"></iframe></div></div><div id='columns-clearer'></div></div>
+                    </div>
+                    <div id="breadcrumbcontainer" class="clear"><ul><li><a href="../index.html">Home</a>&nbsp;/&nbsp;</li><li><a href="page4.html">Standings & Schedules</a>&nbsp;/&nbsp;</li></ul></div>
+                </div>
+                <!-- End Content -->
+
+            </div>
+            <!-- End Content Wrappers -->
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <div id="footer">
+        <div id="extraContentBottom">
+            <div id="extraContainer2"><!--extra user content renders here--></div><!-- #extraContainer2 -->
+            <div class="clearer"></div>
+        </div>
+        <br />
+        &copy; 2013 LAHPA   <a href="#" id="rw_email_contact">Contact us</a>
+        <script type="text/javascript">var _rwObsfuscatedHref0 = "mai"; var _rwObsfuscatedHref1 = "lto"; var _rwObsfuscatedHref2 = ":la"; var _rwObsfuscatedHref3 = "hpa"; var _rwObsfuscatedHref4 = "@me"; var _rwObsfuscatedHref5 = ".co"; var _rwObsfuscatedHref6 = "m"; var _rwObsfuscatedHref = _rwObsfuscatedHref0 + _rwObsfuscatedHref1 + _rwObsfuscatedHref2 + _rwObsfuscatedHref3 + _rwObsfuscatedHref4 + _rwObsfuscatedHref5 + _rwObsfuscatedHref6; document.getElementById('rw_email_contact').href = _rwObsfuscatedHref;</script>
+    </div>
+    <!-- Footer -->
+    <div id="bottomspacer"></div>
+    <!-- Start Google Analytics -->
+    <script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+    </script>
+    <script type="text/javascript">
+        _uacct = "UA-2516649-1";
+        urchinTracker();
+    </script><!-- End Google Analytics -->
+</body>
+</html>
