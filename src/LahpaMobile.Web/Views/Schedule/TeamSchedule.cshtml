@@ -10,7 +10,7 @@
         @foreach (var game in Model.Games)
         {
             <tr>
-                <td>@game.Time.ToString("M")</td>
+                <td>@game.Time.ToString("MMM dd")</td>
                 <td>@game.Time.ToShortTimeString()</td>
                 <td>
                     @Html.ActionLink(game.HomeTeam, "TeamSchedule", "Schedule", new { id = Model.League, teamName = game.HomeTeam }, null)
