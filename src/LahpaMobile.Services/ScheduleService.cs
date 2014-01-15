@@ -40,11 +40,18 @@ namespace LahpaMobile.Services
                     Schedule aleSchedule = parsedSchedules.FirstOrDefault(i => i.Description.StartsWith("C League Ale"));
                     if (aleSchedule == null)
                     {
-                        parsedSchedules.Add(new Schedule
+                        Schedule tweakedSchedule = new Schedule
                         {
-                            Description = "C League Ale",Games = schedule.Games
-                        });
+                            Description = "C League Ale",
+                            Games = new List<SingleGame>()
+                        };
 
+                        foreach (SingleGame singleGame in schedule.Games)
+                        {
+                            singleGame.League = tweakedSchedule.Description;
+                            tweakedSchedule.Games.Add(singleGame);
+                        }
+                        parsedSchedules.Add(tweakedSchedule);
                     }
                     else
                     {

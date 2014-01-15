@@ -31,6 +31,7 @@ namespace LahpaMobile.Services
             {
                 foreach (IEvent gameEvent in item.Events)
                 {
+
                     games.Add(_gameParser.ParseGame(gameEvent.Summary, gameEvent.Start.Local, gameEvent.Location, league));
                 }
             }
