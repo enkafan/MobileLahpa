@@ -1,4 +1,8 @@
 ﻿body,h1,h2,h3,h4 {
     font-family: 'Open Sans', sans-serif;
 }
+
+h2 {
+    font-weight: bold;
+}
 .navbar { margin-bottom: 0 !important;}
