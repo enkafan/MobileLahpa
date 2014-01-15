@@ -63,8 +63,8 @@ namespace LahpaMobile.Services
 
             return new SingleGame
             {
-                HomeTeam = match.Groups["HomeTeam"].Value,
-                AwayTeam = match.Groups["AwayTeam"].Value,
+                HomeTeam = match.Groups["HomeTeam"].Value.Replace("Porter Paints", "Porter Paint"),
+                AwayTeam = match.Groups["AwayTeam"].Value.Replace("Porter Paints", "Porter Paint"),
                 Location = location,
                 Time = time,
                 League = league

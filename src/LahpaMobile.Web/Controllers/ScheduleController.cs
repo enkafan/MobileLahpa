@@ -76,7 +76,7 @@ namespace LahpaMobile.Web.Controllers
             List<SingleGame> teamGames = schedule.Games.Where(
                 i =>
                     i.AwayTeam.Equals(teamName, StringComparison.InvariantCultureIgnoreCase) ||
-                    i.HomeTeam.Equals(teamName)).ToList();
+                    i.HomeTeam.Equals(teamName, StringComparison.InvariantCultureIgnoreCase)).ToList();
 
             if (teamGames.Count == 0)
             {
