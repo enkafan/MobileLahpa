@@ -6,6 +6,7 @@ using System.Web;
 using System.Web.Mvc;
 using LahpaMobile.Services;
 using LahpaMobile.Web.Services;
+using LahpaMobile.Web.ViewModels;
 
 namespace LahpaMobile.Web.Controllers
 {
@@ -28,20 +29,24 @@ namespace LahpaMobile.Web.Controllers
                 return RedirectToAction("Index", "Home");
             }
             
-            LeagueScheduleViewModel model = new LeagueScheduleViewModel {Description = id};
-            model.Days = new List<LeagueScheduleViewModel.Day>();
+            LeagueScheduleViewModel model = new LeagueScheduleViewModel
+            {
+                Description = id,
+                Days = new List<LeagueScheduleViewModel.Day>()
+            };
+
             bool setActive = false;
             foreach (var game in schedule.Games.OrderBy(i=>i.Time))
             {
                 string dayDescription = game.Time.ToLongDateString();
-                LeagueScheduleViewModel.Day day = model.Days.FirstOrDefault(i => i.Description == dayDescription);
-                if (day != null)
+                LeagueScheduleViewModel.Day gameDay = model.Days.FirstOrDefault(i => i.Description == dayDescription);
+                if (gameDay != null)
                 {
-                    day.Games.Add(game);
+                    gameDay.Games.Add(game);
                 }
                 else
                 {
-                    day = new LeagueScheduleViewModel.Day
+                    gameDay = new LeagueScheduleViewModel.Day
                     {
                         Description = dayDescription,
                         Games = new List<SingleGame> {game}
@@ -49,26 +54,50 @@ namespace LahpaMobile.Web.Controllers
                     if (setActive == false && game.Time.AddDays(-1) < DateTime.Now)
                     {
                         setActive = true;
-                        day.Active = true;
+                        gameDay.Active = true;
                     }
-                    model.Days.Add(day);
+                    model.Days.Add(gameDay);
                 }
             }
 
             return View(model);
         }
-	}
 
-    public class LeagueScheduleViewModel
-    {
-        public List<Day> Days { get; set; }
-        public string Description { get; set; }
-
-        public class Day
+        public async Task<ActionResult> TeamSchedule(string id, string teamName)
         {
-            public bool Active { get; set; }
-            public string Description { get; set; }
-            public List<SingleGame> Games { get; set; }
+            List<Schedule> schedules = await _scheduleService.GetScheduleAsync();
+            Schedule schedule = schedules.FirstOrDefault(i => i.Description.Equals(id, StringComparison.InvariantCultureIgnoreCase));
+
+            if (schedule == null)
+            {
+                return RedirectToAction("Index", "Home");
+            }
+
+            List<SingleGame> teamGames = schedule.Games.Where(
+                i =>
+                    i.AwayTeam.Equals(teamName, StringComparison.InvariantCultureIgnoreCase) ||
+                    i.HomeTeam.Equals(teamName)).ToList();
+
+            if (teamGames.Count == 0)
+            {
+                return RedirectToAction("Index", "Home");   
+            }
+
+            TeamScheduleViewModel model = new TeamScheduleViewModel
+            {
+                TeamName = teamName,
+                League = id,
+                Games = teamGames
+            };
+
+            return View(model);
         }
+    }
+
+    public class TeamScheduleViewModel
+    {
+        public List<SingleGame> Games { get; set; }
+        public string League { get; set; }
+        public string TeamName { get; set; }
     }
 }

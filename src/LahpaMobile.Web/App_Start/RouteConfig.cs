@@ -14,6 +14,12 @@ namespace LahpaMobile.Web
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
+                name: "TeamSchedule",
+                url: "schedule/index/{id}/team/{teamName}",
+                defaults: new { controller = "Schedule", action = "TeamSchedule" }
+            );
+
+            routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }

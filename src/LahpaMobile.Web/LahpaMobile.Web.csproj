@@ -92,6 +92,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\normalize.css" />
+    <Content Include="Content\styles.css" />
     <Content Include="Global.asax" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -107,6 +109,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\SimpleInjectorInitializer.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="ViewModels\LeagueScheduleViewModel.cs" />
     <Compile Include="Controllers\ScheduleController.cs" />
     <Compile Include="Services\CachedScheduleService.cs" />
     <Compile Include="ViewModels\HomeViewModel.cs" />
@@ -123,6 +126,7 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Schedule\Index.cshtml" />
+    <Content Include="Views\Schedule\TeamSchedule.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -132,7 +136,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>

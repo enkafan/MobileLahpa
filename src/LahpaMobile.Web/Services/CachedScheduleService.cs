@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
@@ -26,14 +28,19 @@ namespace LahpaMobile.Web.Services
 
         public async Task<List<Schedule>> GetScheduleAsync()
         {
-            List<Schedule> schedule = _httpContext.Cache["Schedule"] as List<Schedule>;
-            if (schedule != null)
+            const string scheduleCacheKey = "Schedule";
+            List<Schedule> schedule = _httpContext.Cache[scheduleCacheKey] as List<Schedule>;
+            
+            if (Debugger.IsAttached == false && schedule != null)
                 return await Task.FromResult(schedule);
 
+            string scheduleUrl = ConfigurationManager.AppSettings["ScheduleUrl"];
+            if (string.IsNullOrWhiteSpace(scheduleUrl))
+                scheduleUrl = "http://lahpa.com/page4/page4.html";
 
-            schedule = await _scheduleService.GetScheduleAsync(new Uri("http://lahpa.com/page4/page4.html"));
+            schedule = await _scheduleService.GetScheduleAsync(new Uri(scheduleUrl));
 
-            _httpContext.Cache.Add("Schedule", schedule, null, DateTime.Now.AddMinutes(5), Cache.NoSlidingExpiration, CacheItemPriority.Default, null);
+            _httpContext.Cache.Add(scheduleCacheKey, schedule, null, DateTime.Now.AddMinutes(5), Cache.NoSlidingExpiration, CacheItemPriority.Default, null);
             return schedule;
         }
     }
