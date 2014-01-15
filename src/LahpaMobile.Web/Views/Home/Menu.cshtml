@@ -18,7 +18,7 @@
             <ul class="nav navbar-nav">
                 @foreach (var league in Model)
                 {
-                    <li>@Html.ActionLink(league, "Index", "Schedule", new { id = league }, null)</li>
+                    <li>@Html.ActionLink(league.Replace("C League ", "C "), "Index", "Schedule", new { id = league }, null)</li>
                 }
             </ul>
         </div><!-- /.navbar-collapse -->
