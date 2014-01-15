@@ -6,5 +6,6 @@ namespace LahpaMobile.Web.ViewModels
     public class HomeViewModel
     {
         public List<Schedule> Schedules { get; set; }
+        public List<SingleGame> UpcomingGames { get; set; }
     }
 }

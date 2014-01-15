@@ -17,7 +17,7 @@ namespace UnitTests
             ScheduleParser parser = new ScheduleParser(gameParser);
 
             // act
-            List<SingleGame> games = parser.ParseCalendar(calendarBytes);
+            List<SingleGame> games = parser.ParseCalendar(calendarBytes, "Ale");
         }
     }
 }

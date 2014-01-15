@@ -7,12 +7,18 @@
     <title>@ViewBag.Title</title>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,800' rel='stylesheet' type='text/css'>
 
-    <link href="/content/normalize.css" rel="stylesheet" type="text/css" />
-    <link href="/Content/styles.css" rel="stylesheet" type="text/css" />
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     
 
 </head>
     <body>
-        @RenderBody()        
+        
+        @{ Html.RenderAction("Menu", "Home");}
+        <div class="container">
+            @RenderBody()
+        </div>
+        
+        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
     </body>
 </html>

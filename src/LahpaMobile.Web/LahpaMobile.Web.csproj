@@ -92,24 +92,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\normalize.css" />
     <Content Include="Content\styles.css" />
     <Content Include="Global.asax" />
-    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
-    <Content Include="Scripts\jquery-1.10.2.js" />
-    <Content Include="Scripts\jquery-1.10.2.min.js" />
-    <None Include="Scripts\jquery.validate-vsdoc.js" />
-    <Content Include="Scripts\jquery.validate.js" />
-    <Content Include="Scripts\jquery.validate.min.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\SimpleInjectorInitializer.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="ViewModels\LeagueScheduleViewModel.cs" />
+    <Compile Include="ViewModels\MultiDayScheduleViewModel.cs" />
     <Compile Include="Controllers\ScheduleController.cs" />
     <Compile Include="Services\CachedScheduleService.cs" />
     <Compile Include="ViewModels\HomeViewModel.cs" />
@@ -121,12 +112,12 @@
   <ItemGroup>
     <Content Include="Views\web.config" />
     <Content Include="packages.config" />
-    <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Schedule\Index.cshtml" />
     <Content Include="Views\Schedule\TeamSchedule.cshtml" />
+    <Content Include="Views\Home\Menu.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -137,6 +128,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="Scripts\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\LahpaMobile.Services\LahpaMobile.Services.csproj">

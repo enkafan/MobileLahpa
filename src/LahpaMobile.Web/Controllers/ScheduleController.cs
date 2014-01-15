@@ -29,24 +29,24 @@ namespace LahpaMobile.Web.Controllers
                 return RedirectToAction("Index", "Home");
             }
             
-            LeagueScheduleViewModel model = new LeagueScheduleViewModel
+            MultiDayScheduleViewModel model = new MultiDayScheduleViewModel
             {
                 Description = id,
-                Days = new List<LeagueScheduleViewModel.Day>()
+                Days = new List<MultiDayScheduleViewModel.Day>()
             };
 
             bool setActive = false;
             foreach (var game in schedule.Games.OrderBy(i=>i.Time))
             {
                 string dayDescription = game.Time.ToLongDateString();
-                LeagueScheduleViewModel.Day gameDay = model.Days.FirstOrDefault(i => i.Description == dayDescription);
+                MultiDayScheduleViewModel.Day gameDay = model.Days.FirstOrDefault(i => i.Description == dayDescription);
                 if (gameDay != null)
                 {
                     gameDay.Games.Add(game);
                 }
                 else
                 {
-                    gameDay = new LeagueScheduleViewModel.Day
+                    gameDay = new MultiDayScheduleViewModel.Day
                     {
                         Description = dayDescription,
                         Games = new List<SingleGame> {game}

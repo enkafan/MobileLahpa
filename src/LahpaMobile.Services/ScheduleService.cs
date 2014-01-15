@@ -66,7 +66,7 @@ namespace LahpaMobile.Services
             
             return new Schedule
             {
-                Games = _scheduleParser.ParseCalendar(calendarBytes),
+                Games = _scheduleParser.ParseCalendar(calendarBytes, scheduleLink.Title),
                 Description = scheduleLink.Title
             };
         }

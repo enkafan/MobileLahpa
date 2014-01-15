@@ -36,7 +36,7 @@ namespace LahpaMobile.Web.App_Start
             container.Register<IScheduleParser, ScheduleParser>();
             container.Register<IScheduleService, ScheduleService>();
             container.Register<HttpContext>(() => HttpContext.Current);
-            container.Register<ICachedScheduleService, CachedScheduleService>();
+            container.RegisterPerWebRequest<ICachedScheduleService, CachedScheduleService>();
         }
     }
 }

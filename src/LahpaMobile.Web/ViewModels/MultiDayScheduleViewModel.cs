@@ -3,7 +3,7 @@ using LahpaMobile.Services;
 
 namespace LahpaMobile.Web.ViewModels
 {
-    public class LeagueScheduleViewModel
+    public class MultiDayScheduleViewModel
     {
         public List<Day> Days { get; set; }
         public string Description { get; set; }

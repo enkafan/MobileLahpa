@@ -15,7 +15,7 @@ namespace UnitTests
             GameParser parser = new GameParser();
 
             // act
-            SingleGame singleGame = parser.ParseGame(input, DateTime.Now, "Wherever");
+            SingleGame singleGame = parser.ParseGame(input, DateTime.Now, "Wherever", "My League");
 
             // assert
             Assert.AreEqual(home, singleGame.HomeTeam);

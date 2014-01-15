@@ -11,7 +11,7 @@ namespace LahpaMobile.Services
 {
     public interface IScheduleParser
     {
-        List<SingleGame> ParseCalendar(byte[] calendar);
+        List<SingleGame> ParseCalendar(byte[] calendar, string league);
     }
 
     public class ScheduleParser : IScheduleParser
@@ -23,7 +23,7 @@ namespace LahpaMobile.Services
             _gameParser = gameParser;
         }
 
-        public List<SingleGame> ParseCalendar(byte[] calendar)
+        public List<SingleGame> ParseCalendar(byte[] calendar, string league)
         {
             List<SingleGame> games = new List<SingleGame>();
             IICalendarCollection calendars = iCalendar.LoadFromStream(new MemoryStream(calendar));
@@ -31,7 +31,7 @@ namespace LahpaMobile.Services
             {
                 foreach (IEvent gameEvent in item.Events)
                 {
-                    games.Add(_gameParser.ParseGame(gameEvent.Summary, gameEvent.Start.Local, gameEvent.Location));
+                    games.Add(_gameParser.ParseGame(gameEvent.Summary, gameEvent.Start.Local, gameEvent.Location, league));
                 }
             }
 
@@ -42,12 +42,12 @@ namespace LahpaMobile.Services
 
     public interface IGameParser
     {
-        SingleGame ParseGame(string game, DateTime time, string location);
+        SingleGame ParseGame(string game, DateTime time, string location, string league);
     }
 
     public class GameParser:IGameParser
     {
-        public SingleGame ParseGame(string game, DateTime time, string location)
+        public SingleGame ParseGame(string game, DateTime time, string location, string league)
         {
             // format: "Game {number} {home} vs {away}
             const string regexPattern = @"^Game (?<GameNumber>.*?) (?<HomeTeam>.(?:(?!vs).)*) vs (?<AwayTeam>.*)";
@@ -65,7 +65,8 @@ namespace LahpaMobile.Services
                 HomeTeam = match.Groups["HomeTeam"].Value,
                 AwayTeam = match.Groups["AwayTeam"].Value,
                 Location = location,
-                Time = time
+                Time = time,
+                League = league
             };
             
 
@@ -78,5 +79,6 @@ namespace LahpaMobile.Services
         public string AwayTeam { get; set; }
         public string Location { get; set; }
         public DateTime Time { get; set; }
+        public string League { get; set; }
     }
 }

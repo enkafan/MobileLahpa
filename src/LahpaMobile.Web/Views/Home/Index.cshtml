@@ -1,4 +1,4 @@
-﻿@model LahpaMobile.Web.ViewModels.HomeViewModel
+﻿@model LahpaMobile.Web.ViewModels.MultiDayScheduleViewModel
 
 @{
     ViewBag.Title = "LAHPA Mobile";
@@ -6,10 +6,24 @@
 
 <h2>Louisville Hockey</h2>
 
-<ul class="scheduleList">
-    @foreach (var schedule in Model.Schedules)
+@foreach (var day in Model.Days)
+{
+    <h3>@day.Description</h3>
+<table class="table table-bordered">
+    @foreach (var game in day.Games)
     {
-        <li>@Html.ActionLink(schedule.Description,"Index", "Schedule", new{id = schedule.Description},null)</li>
-        
+        <tr>
+            <td>@game.Time.ToString("M")</td>
+            <td>@game.Time.ToShortTimeString()</td>
+            <td>
+                @Html.ActionLink(game.HomeTeam, "TeamSchedule", "Schedule", new { id = game.League, teamName = game.HomeTeam }, null)
+
+            </td>
+            <td>
+                @Html.ActionLink(game.AwayTeam, "TeamSchedule", "Schedule", new { id = game.League, teamName = game.AwayTeam }, null)
+            </td>
+            <td>@game.Location</td>
+        </tr>
     }
-</ul>
+</table>    
+}
