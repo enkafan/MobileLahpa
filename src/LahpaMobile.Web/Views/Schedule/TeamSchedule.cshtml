@@ -5,20 +5,22 @@
 }
 
 <h2>@Model.TeamName <small>@Model.League</small></h2>
-<table class="table table-bordered">
-    @foreach (var game in Model.Games)
-    {
-        <tr>
-            <td>@game.Time.ToString("M")</td>
-            <td>@game.Time.ToShortTimeString()</td>
-            <td>
-                @Html.ActionLink(game.HomeTeam, "TeamSchedule", "Schedule", new { id = Model.League, teamName = game.HomeTeam }, null)
+<table class="table table-bordered table-striped">
+    <tbody>
+        @foreach (var game in Model.Games)
+        {
+            <tr>
+                <td>@game.Time.ToString("M")</td>
+                <td>@game.Time.ToShortTimeString()</td>
+                <td>
+                    @Html.ActionLink(game.HomeTeam, "TeamSchedule", "Schedule", new { id = Model.League, teamName = game.HomeTeam }, null)
 
-            </td>
-            <td>
-                @Html.ActionLink(game.AwayTeam, "TeamSchedule", "Schedule", new { id = Model.League, teamName = game.AwayTeam }, null)
-            </td>
-            <td>@game.Location</td>
-        </tr>
-    }
+                </td>
+                <td>
+                    @Html.ActionLink(game.AwayTeam, "TeamSchedule", "Schedule", new { id = Model.League, teamName = game.AwayTeam }, null)
+                </td>
+                <td>@game.Location</td>
+            </tr>
+        }
+    </tbody>
 </table>

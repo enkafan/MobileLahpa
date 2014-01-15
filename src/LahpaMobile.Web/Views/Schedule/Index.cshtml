@@ -9,19 +9,21 @@
 @foreach (var day in Model.Days)
 {
     <h3>@day.Description</h3>
-    <table class="table table-bordered">
-        @foreach (var game in day.Games)
-{
-    <tr>
-        <td>@game.Time.ToShortTimeString()</td>
-        <td>
-            @Html.ActionLink(game.HomeTeam,"TeamSchedule", "Schedule", new{id=Model.Description,teamName=game.HomeTeam},null)            
-        </td>
-        <td>
-            @Html.ActionLink(game.AwayTeam, "TeamSchedule", "Schedule", new { id = Model.Description, teamName = game.AwayTeam },null)
-        </td>
-        <td>@game.Location</td>
-    </tr>
-}
+    <table class="table table-bordered table-striped">
+        <tbody>
+            @foreach (var game in day.Games)
+            {
+                <tr>
+                    <td>@game.Time.ToShortTimeString()</td>
+                    <td>
+                        @Html.ActionLink(game.HomeTeam, "TeamSchedule", "Schedule", new { id = Model.Description, teamName = game.HomeTeam }, null)
+                    </td>
+                    <td>
+                        @Html.ActionLink(game.AwayTeam, "TeamSchedule", "Schedule", new { id = Model.Description, teamName = game.AwayTeam }, null)
+                    </td>
+                    <td>@game.Location</td>
+                </tr>
+            }
+        </tbody>
     </table>
 }
