@@ -27,7 +27,7 @@ namespace LahpaMobile.Web.Controllers
             List<SingleGame> upcomingGames = new List<SingleGame>();
             foreach (Schedule schedule in schedules)
             {
-                upcomingGames.AddRange(schedule.Games.Where(game => game.Time > DateTime.Today && game.Time < DateTime.Today.AddDays(6)));
+                upcomingGames.AddRange(schedule.Games.Where(game => game.Time > DateTime.Today && game.Time < DateTime.Today.AddDays(14)));
             }
 
             MultiDayScheduleViewModel model = new MultiDayScheduleViewModel
